@@ -1,6 +1,6 @@
 class PackageData
   attr_accessor :weight, :length, :width, :height, :distance , :price, :info
-  def initialize()
+  def initialize
     @weight   = 0
     @length   = 0
     @width    = 0
@@ -36,11 +36,12 @@ class PackageData
   end
 
   def PackageLocation(ponit_of_departure = "", destination = "")
-    puts("wtite point of departure")
+    puts("wtite point of departure: ")
     ponit_of_departure = gets
-    puts("wtite destination")
+    puts("wtite destination: ")
     destination = gets
     @distance = Google::Maps.distance(ponit_of_departure, destination)
+    return @distance
   end
 
   def volume()
@@ -57,6 +58,7 @@ class PackageData
     else
       puts("we don't deliver such parcels")
     end
+    return @price
   end
 
   def Information()
