@@ -4,7 +4,7 @@ require_relative 'PackageData.rb'
 describe PackageData do
   context "With valid input" do
 
-    it "should give distance between points(string names) in parameter" do
+    it "should give distance between points(string names) and price calculation in parameter" do
       for i in 0..10
       box = PackageData.new(i, i, i, i)
       ponit_of_departure = "Amsterdam"
@@ -14,7 +14,7 @@ describe PackageData do
       end
     end
 
-    it "should give distance between points(coordinates) in parameter" do
+    it "should give distance between points(coordinates) and price calculation in parameter" do
         for i in 0..10
         box = PackageData.new(i, i, i, i)
         ponit_of_departure = "52.3545543,4.9519029"
